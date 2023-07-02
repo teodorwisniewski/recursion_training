@@ -1,0 +1,20 @@
+
+
+
+
+function getEvenNumbers(arr){
+    if (arr.length === 0) {
+        return [];
+    } 
+    if ((arr[0] % 2) === 0){
+        result = getEvenNumbers(arr.slice(1))
+        return [arr[0], ...result];
+    } else{
+        result = getEvenNumbers(arr.slice(1))
+        return [...result];
+    }
+}
+
+
+let arr1 = [10, 1, 2, 3, 4, 5,6]
+console.log(`Even numbers \n ${getEvenNumbers(arr1)}`)
