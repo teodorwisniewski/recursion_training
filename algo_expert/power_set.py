@@ -1,16 +1,13 @@
 
 
+# TC O( n.2^n) SC(2^n.n)
 def power_set(arr):
     power_set = [[]]
     for num in arr:
-
-        for subset in power_set:
-            new_subset = list(set([num] + subset))
-            if new_subset not in power_set:
-                power_set.append(new_subset)
-        if [num] not in power_set:
-            power_set.append([num])
-        
+        for i in range(len(power_set)):
+            current_subset = power_set[i]
+            new_subset = list(set([num] + current_subset))   
+            power_set.append(new_subset)
     return power_set
 
 
