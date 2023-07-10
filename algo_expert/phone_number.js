@@ -14,6 +14,7 @@ const telephoneKeypad = {
 };
 
 
+// TC and SC: O(4^n *n)
 function phoneNumberMnemonics(phoneNumber) {
     let currentMnemonic = new Array(phoneNumber.length).fill("0")
     let mnemonicsFound = [];
