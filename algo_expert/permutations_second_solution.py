@@ -27,17 +27,6 @@ def helper_permute(idx, input_arr, perms=None, indent=0):
             helper_permute(idx+1, input_arr, perms, indent=indent+1)
             swap(input_arr, j, idx)
 
-    
-
-
-        
-
-
-        
-
-
-
-
 
 
 if __name__ == "__main__":
