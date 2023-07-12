@@ -6,7 +6,7 @@
 // If the node's value doesn't match the target, it recursively searches the node's left and right subtrees. The || operator ensures that as soon as a match is found in either subtree, the function returns true without further traversal.
 
 
-// function findNode(node, targetValue) {
+// function nodeExists(node, targetValue) {
 //     if (node == null) {
 //       // Base case: if we've reached the end of a branch without finding the value, return false
 //       return false;
@@ -20,8 +20,8 @@
 //     return findNode(node.left, targetValue) || findNode(node.right, targetValue);
 //   }
   
-//   console.log(findNode(tree, "Z")); // Output: true
-//   console.log(findNode(tree, "Y")); // Output: false
+//   console.log(nodeExists(tree, "Z")); // Output: true
+//   console.log(nodeExists(tree, "Y")); // Output: false
 
 
 
