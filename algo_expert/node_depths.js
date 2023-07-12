@@ -1,21 +1,27 @@
 
-function nodeDepths(root) {
-    depthSum = [0];
-    nodeDepthsHelper(root, depthSum, 0)
-    return depthSum[0]
-}
+// function nodeDepths(root) {
+//     depthSum = [0];
+//     nodeDepthsHelper(root, depthSum, 0)
+//     return depthSum[0]
+// }
 
-function nodeDepthsHelper(node, depthSum, depth){
+// function nodeDepthsHelper(node, depthSum, depth){
 
-    if(node === null){
-        return;
-    } else{
-        depthSum[0] += depth;
-        nodeDepthsHelper(node.left, depthSum, depth+1);
-        nodeDepthsHelper(node.right, depthSum, depth+1);
-    }
-}
+//     if(node === null){
+//         return;
+//     } else{
+//         depthSum[0] += depth;
+//         nodeDepthsHelper(node.left, depthSum, depth+1);
+//         nodeDepthsHelper(node.right, depthSum, depth+1);
+//     }
+// }
   
+function nodeDepths(root, depth=0) {
+    if (root === null) return 0;
+
+    return depth + nodeDepths(root.left, depth+1) + nodeDepths(root.right, depth+1)
+
+}
 
 
 class BinaryTree {
