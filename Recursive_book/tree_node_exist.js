@@ -1,4 +1,32 @@
 
+// In this function, findNode takes the current node and a target value as parameters. It first checks if the node exists (if it's not null). If it doesn't, it returns false, as this means we've reached the end of a branch without finding the target value.
+
+// If the node does exist, it checks if the node's value matches the target value. If it does, it returns true.
+
+// If the node's value doesn't match the target, it recursively searches the node's left and right subtrees. The || operator ensures that as soon as a match is found in either subtree, the function returns true without further traversal.
+
+
+// function findNode(node, targetValue) {
+//     if (node == null) {
+//       // Base case: if we've reached the end of a branch without finding the value, return false
+//       return false;
+//     }
+//     if (node.value === targetValue) {
+//       // If the current node's value matches the target, return true
+//       return true;
+//     }
+  
+//     // If the current node's value does not match the target, continue to search the left and right subtrees
+//     return findNode(node.left, targetValue) || findNode(node.right, targetValue);
+//   }
+  
+//   console.log(findNode(tree, "Z")); // Output: true
+//   console.log(findNode(tree, "Y")); // Output: false
+
+
+
+
+
 
 
 function nodeExists(node, targeValue){
