@@ -8,13 +8,11 @@ class Node {
       this.children.push(new Node(name));
       return this;
     }
-  
+    
+
+    // TC O(v+e) SC O(v)
     depthFirstSearch(array) {
       array.push(this.name)
-      if (this.children.length === 0){
-        return;
-      }
-      
       for (let i=0; i<this.children.length; i++){
         let child = this.children[i]
         child.depthFirstSearch(array)
