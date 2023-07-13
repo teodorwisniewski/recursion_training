@@ -4,18 +4,22 @@
 // TC O(n) SC O(log(N))
 function invertBinaryTree(root) {
     
-    if (!root || !root.left && !root.right){
+    if (!root){
         return root
     } 
     
-    temp = root.left;
-    root.left = root.right;
-    root.right = temp;
+    swapLeftAndRight(root)
     invertBinaryTree(root.right);
     invertBinaryTree(root.left);
 
     return root;
 
+}
+
+function swapLeftAndRight(node){
+    temp = node.left;
+    node.left = node.right;
+    node.right = temp;
 }
 
 
@@ -71,6 +75,7 @@ class BinaryTree {
 
 
   inverted_tree = invertBinaryTree(root)
+  console.log(`\n`)
   printTree(inverted_tree);
 
 
@@ -78,5 +83,6 @@ class BinaryTree {
   let root2 = new BinaryTree('T');
   root2.left = new BinaryTree('W');
   printTree(root2);
+  console.log(`\n`)
   inverted_tree2 = invertBinaryTree(root2)
   printTree(inverted_tree2);
