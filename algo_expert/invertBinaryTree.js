@@ -1,7 +1,7 @@
 
 
 
-// TC O(n) SC O(n)
+// TC O(n) SC O(log(N))
 function invertBinaryTree(root) {
     
     if (!root || !root.left && !root.right){
