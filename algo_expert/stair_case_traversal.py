@@ -1,6 +1,6 @@
 
 
-
+# TC O(maxsteps^h) SC O(h)
 def getNbOfWaysToTopOfStaircase(height, max_nb_steps):
 
     if height <= 1:
@@ -26,7 +26,7 @@ def getNbOfWaysToTopOfStaircase(height, max_nb_steps):
 
 
 
-height = 4
-max_steps = 2
+height = 25
+max_steps = 8
 res = getNbOfWaysToTopOfStaircase(height, max_steps)
 print(f"For height={height} and max_steps={max_steps} the number of ways to is {res}")
