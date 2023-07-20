@@ -14,19 +14,22 @@ def getNbOfWaysToTopOfStaircase(height, max_nb_steps):
 
 def getNbOfWaysToTopOfStaircase2(height, max_nb_steps, memo=None):
 
-    if height <= 1:
-        return 1
+    # if height <= 1:
+    #     return 1
     
     if memo is None:
-        memo = dict()
-    elif (height, max_nb_steps) in memo:
-        return memo[(height, max_nb_steps)]
+        memo = {
+            0: 1,
+            1: 1
+        }
+    elif height in memo:
+        return memo[height]
     
     nb_of_ways = 0
     for steps in range(1, min(height, max_nb_steps) + 1):
         res = getNbOfWaysToTopOfStaircase2(height - steps, max_nb_steps, memo=memo)
-        if (height, max_nb_steps) not in memo:
-            memo[(height, max_nb_steps)] = res
+        if height not in memo:
+            memo[height-steps] = res
         nb_of_ways += res
 
     return nb_of_ways
@@ -38,8 +41,8 @@ def wrapper(func, *args, **kwargs):
     return wrapped
 
 
-height = 25
-max_steps = 8
+height = 4
+max_steps = 2
 
 
 # start_time = time.time()
