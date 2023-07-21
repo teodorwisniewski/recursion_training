@@ -26,7 +26,7 @@ def getNbOfWaysToTopOfStaircase3(height, max_nb_steps):
     return steps[-1]
 
 # TC O(n) SC O(max_nb_steps)
-def getNbOfWaysToTopOfStaircase4(height, max_nb_steps, memo=None):
+def getNbOfWaysToTopOfStaircase4(height, max_nb_steps):
     if height < 1:
         return 1
     
